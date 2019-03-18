@@ -1,0 +1,46 @@
+'use strict';
+var crypto = require('crypto');
+//var AES = require('./lib/aes');
+var key = 'truepush123truepush';
+key = crypto.createHash('sha1').update(key, 'utf-8').digest();
+key = key.slice(0, 16);
+
+module.exports = {
+    decrypt: function (data) {
+        return (decryption(data, key));
+    },
+    encrypt: function (data) {
+        return (encryption(data, key));
+    }
+};
+
+
+function encryption(data, key) {
+    var iv = "";
+    var clearEncoding = 'utf8';
+    var cipherEncoding = 'base64';
+    var cipherChunks = [];
+
+    var cipher = crypto.createCipheriv('aes-128-ecb', key, iv);
+    cipher.setAutoPadding(true);
+
+    cipherChunks.push(cipher.update(data, clearEncoding, cipherEncoding));
+    cipherChunks.push(cipher.final(cipherEncoding));
+
+    return cipherChunks.join('');
+}
+
+// Data is ready to decrypt your strings, key is your key
+function decryption(data, key) {
+    var iv = "";
+    var clearEncoding = 'utf8';
+    var cipherEncoding = 'base64';
+    var cipherChunks = [];
+    var decipher = crypto.createDecipheriv('aes-128-ecb', key, iv);
+    decipher.setAutoPadding(true);
+
+    cipherChunks.push(decipher.update(data, cipherEncoding, clearEncoding));
+    cipherChunks.push(decipher.final(clearEncoding));
+
+    return cipherChunks.join('');
+}

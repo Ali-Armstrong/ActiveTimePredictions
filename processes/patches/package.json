@@ -1,0 +1,11 @@
+{
+  "name": "patches",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dmpEmIdInserter": "node dmpEmIdInserter.js prod",
+    "idsConverter": "node truePushIds_to_dmpIds_converter.js prod"
+  },
+  "dependencies": {
+  }
+}

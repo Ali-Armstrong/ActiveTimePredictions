@@ -1,0 +1,27 @@
+{
+  "name": "UserActiveTimePredictor",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "pm2_logs": "node app.js"
+  },
+  "dependencies": {
+    "amqplib": "*",
+    "asynch": "^0.5.2",
+    "cheerio": "^1.0.0-rc.2",
+    "config": "^1.25.1",
+    "event-stream": "^3.3.4",
+    "events": "^1.1.1",
+    "lazy": "^1.0.11",
+    "mongodb": "*",
+    "node": "^9.2.0",
+    "node-schedule": "^1.2.5",
+    "nodemailer": "^4.4.1",
+    "randomstring": "^1.1.5",
+    "redis": "*",
+    "request": "^2.83.0",
+    "shortid": "^2.2.8",
+    "tracer": "^0.8.9",
+    "ws": "^2.3.1"
+  }
+}

@@ -1,0 +1,7 @@
+predictor
+    config command line argv
+    redis connection
+    mongo connection
+    only update for status 2
+    only update for predictions table
+

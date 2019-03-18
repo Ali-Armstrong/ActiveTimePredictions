@@ -1,0 +1,16 @@
+{
+  "name": "prediction",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "predictor_prod": "python predictor.py prod",
+    "predictor_test": "python predictor.py test",
+    "dmp_production": "node dmp.js prod",
+    "dmpUpdater_prod": "node dmpUpdater.js prod",
+    "predictor_production_copy": "python predictor_copy.py prod",
+    "cleaner_prod": "node cleaner.js prod",
+    "cleaner_test": "node cleaner.js test"
+  },
+  "dependencies": {
+  }
+}

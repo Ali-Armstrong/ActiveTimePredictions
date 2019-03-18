@@ -1,0 +1,61 @@
+{
+  "mongodb": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "AI",
+    "uri": "mongodb://<username>:<password>@localhost:27017/uatp?authMechanism=SCRAM-SHA-1",
+    "collection1": "UATP_usersHistory",
+    "collection2": "UATP_RealPredictions",
+    "collection3": "counts",
+    "collection4": "UATP_rawlog",
+    "collection5": "UATP_prediction_stats",
+    "UATP_monitor_stats":"UATP_monitor_stats",
+    "UATP_ts_log":"UATP_ts_log",
+    "UATP_hour_wise":"UATP_hour_wise_stats",
+    "auth":true
+  },
+  "redis": {
+    "host": "ip address",
+    "port": 6363,
+    "db":0,
+    "password": "password",
+    "auth": true
+  },
+  "rabbitmq": {
+    "rabbiturl": "url",
+    "username": "test1",
+    "password": "test1",
+    "server": "ip",
+    "port": 5672,
+    "emailReactions":{
+      "q": "UATP_emailReactionsLog",
+      "exchange": "UATP_emailReactionsLog_ex",
+      "bindingkey": "UATP_emailReactionsLog_bndkey"
+    },
+    "reactions": {
+      "q": "UATP_userReactionLog",
+      "exchange": "UATP_userReactionLog_ex",
+      "bindingkey": "UATP_userReactionLog_bndkey"
+    },
+    "dlvrs": {
+      "q": "UATP_userDeliveryLog",
+      "exchange": "UATP_userDeliveryLog",
+      "bindingkey": "UATP_userDeliveryLog"
+    }
+  },
+  "socket": {
+    "email": "username",
+    "password": "password"
+  },
+  "dmp": {
+    "accessToken":"asldfjlasjdf",
+    "idByemail":{
+      "url":"url"
+    }
+  },
+  "mail": {
+    "senderEmail" : "email",
+    "senderPass" : "pass",
+    "tolist" : "mahamdali.s@way2online.co.in"
+  }
+}

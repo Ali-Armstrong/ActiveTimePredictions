@@ -1,0 +1,40 @@
+{
+  "mongodb": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "local",
+    "uri": "mongodb://<username>:<pasword>@<IP address>/AI?authMechanism=SCRAM-SHA-1",
+    "collection1": "UATP_usersHistory",
+    "collection2": "UATP_RealPredictions",
+    "collection3": "counts",
+    "collection4": "UATP_rawlog",
+    "collection5": "UATP_prediction_stats",
+    "UATP_monitor_stats": "UATP_monitor_stats",
+    "UATP_ts_log": "UATP_ts_log"
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379,
+    "db": 0,
+    "password": "way2redis"
+  },
+  "rabbitmq": {
+    "rabbiturl": "amqp://localhost",
+    "username": "test1",
+    "password": "test1",
+    "reactions": {
+      "q": "hello",
+      "exchange": "hello",
+      "bindingkey": "hello"
+    },
+    "dlvrs": {
+      "q": "hello",
+      "exchange": "hello",
+      "bindingkey": "hello"
+    }
+  },
+  "socket": {
+    "email": "<username>",
+    "password": "<password>"
+  }
+}

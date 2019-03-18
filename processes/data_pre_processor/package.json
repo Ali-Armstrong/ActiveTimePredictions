@@ -1,0 +1,18 @@
+  {
+  "name": "pre_processing",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "mq_pusher_production": "python mq_pusher.py LSINFRAOPENS_new.csv prod",
+    "csv_processing_production": "node csv_processing.js LSINFRAOPENS_new.csv prod",
+    "pre_processing_test": "node pre_processing.js test",
+    "pre_processing_prod": "node pre_processing.js prod",
+    "dlvLog_processor_test": "node dlvLog_processor.js test",
+    "dlvLog_processor_prod": "node dlvLog_processor.js prod",
+    "stats_sender_prod": "node stats_sender.js prod",
+    "reaction_logs_pusher_test":"node reaction_logs_pusher.js test",
+    "reaction_logs_pusher_prod":"node reaction_logs_pusher.js prod"
+  },
+  "dependencies": {
+  }
+}
